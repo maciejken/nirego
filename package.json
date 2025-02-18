@@ -1,7 +1,7 @@
 {
-  "name": "hello-elm",
-  "version": "0.1.0",
-  "description": "package written in elm",
+  "name": "nirego",
+  "version": "0.2.0",
+  "description": "go game app made with elm",
   "main": "index.js",
   "scripts": {
     "preinstall": "elm make src/Main.elm --output=index.js",

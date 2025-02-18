@@ -1,25 +1,25 @@
-module Main exposing (main, Model, processData)
+module Main exposing (main)
 
-import Html exposing (Html, text)
+import Html exposing (text)
+import Browser
 
 
 type alias Model =
-    { data : List Int }
+    String
 
 
 initialModel : Model
 initialModel =
-    { data = [ 1, 2, 3, 4, 5, 7 ] }
+    "Hello, Elm!"
 
+main = Browser.sandbox
+  { init = initialModel
+  , view = view
+  ,update = update
+  }
 
+view data =
+    text initialModel
 
-main : Html msg
-main =
-  let sum = processData initialModel
-  in
-  text (String.fromInt sum)
-
-
-processData : Model -> Int
-processData model =
-    List.sum model.data
+update msg data =
+    "Testing"
